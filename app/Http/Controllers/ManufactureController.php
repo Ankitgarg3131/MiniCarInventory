@@ -9,7 +9,7 @@ class ManufactureController extends Controller
 {
     public function showManufactureScreen()
     {
-        return view('pages.add-manufacture-screen');
+        return view('pages.manufacture');
     }
 
     public function addManufacture(Request $request)
@@ -26,13 +26,21 @@ class ManufactureController extends Controller
             'name'=> $request->name
         ];
         $manufature = Manufacture::Create($data);
-        return response()->json(['Message'=>'Successfully Added'],200);
+        return response()->json(['message'=>'Successfully Added'],200);
     }
 
-    public function showModelScreen()
-    {}
-    public function addModel(Request $request)
+    public function showManufactureList()
     {
+        return view('pages.manufacturelist');
+    }
 
+    public function manufactureList()
+    {
+        $manufatures = Manufacture::all();
+        return $manufatures;
+    }
+    public function showModalScreen()
+    {
+        return view('pages.showmodal');
     }
 }

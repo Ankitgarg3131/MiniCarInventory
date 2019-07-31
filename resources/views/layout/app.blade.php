@@ -34,12 +34,10 @@
 </head>
 <body>
     <!--begin::Vue Js -->
-    <script src="{{ asset('/js/app.js') }}"></script>
 <!--end::Vue Js -->
-    <div id="app">
-      <add-manufacture></add-manufacture>
-    </div>
+    @yield('content')
 
+    <script src="{{ asset('/js/app.js') }}"></script>
 
 </body>
 </html>

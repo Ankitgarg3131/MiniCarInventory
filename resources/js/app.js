@@ -20,6 +20,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('add-manufacture', require('./components/AddManufacture.vue').default);
+Vue.component('manufacture-list', require('./components/ManufactureList.vue').default);
+Vue.component('add-modal', require('./components/AddModal.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
